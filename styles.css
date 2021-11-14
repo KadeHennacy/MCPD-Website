@@ -5,6 +5,9 @@
     .header1{
         justify-content: center;
     }
+    #buildingNumberField{
+        margin-bottom: 1em;
+    }
 }
 body{
     background-color: #0d1431;
@@ -145,7 +148,7 @@ input[type="checkbox"]{
     box-shadow: 5px 5px 5px black;
 }
 .escort{
-    width: 250%;
+    width: 100%;
     max-width: 520px;
     border: 2px solid black;
     border-radius: 6px;
