@@ -1,0 +1,171 @@
+body {
+    background-color: #cccccc;
+}
+
+/*CSS GRID SETUP*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fit, 5, 1fr);
+    grid-gap: .5em;
+}
+
+.grid>div {
+    padding: .25em;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*CONTAINERS*/
+.logo {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    background: #0d1431;
+    border-radius: 6px;
+}
+
+.contactinfo {
+    grid-column: 1/3;
+    grid-row: 2/4;
+    background: #ffffff;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #0d1431;
+    border-width: 4px;
+}
+
+.faqlink {
+    grid-column: 3/5;
+    grid-row: 2/4;
+    background: #9b9b9b;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #0d1431;
+    border-width: 4px;
+}
+
+.guestaccess {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background: #0d1431;
+    border-radius: 6px;
+}
+
+.offcampusspeed {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    background: #0d1431;
+    border-radius: 6px;
+}
+
+.newandpass {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    background: orange;
+    border-radius: 6px;
+}
+
+.policies {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    background: #0d1431;
+    border-radius: 6px;
+}
+
+/*FONTS*/
+.font1 {
+    font-family: "Georgia";
+    color: #0d1431;
+    font-size: calc(6px + .9vw);
+}
+
+.font2 {
+    font-family: "Georgia";
+    color: #0d1431;
+    font-size: calc(6px + .8vw);
+}
+
+.font3 {
+    font-family: "Georgia";
+    color: #0d1431;
+    font-size: calc(5px + .6vw);
+}
+
+.containerheading {
+    font-family: "Georgia";
+    color: #ffffff;
+    font-size: calc(6px + .8vw);
+}
+
+.containerheading2 {
+    font-family: "Georgia";
+    color: #0d1431;
+    font-size: calc(8px + .8vw);
+}
+
+
+/*IMAGES*/
+.mcimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.faqimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    max-width: 160px;
+    filter: invert(100%);
+}
+
+.guestaccessimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: auto;
+    max-width: 140px;
+    filter: invert(100%);
+}
+
+.boltimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: auto;
+    max-width: 160px;
+    filter: invert(100%);
+}
+
+.passresetimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    height: auto;
+    max-width: 160px;
+    filter: invert(100%);
+}
+
+.policyimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    max-width: 100px;
+    filter: invert(0%);
+}
+
+.nounderlinelink {
+    text-decoration: none;
+    color: #0d1431;
+}
+</style>

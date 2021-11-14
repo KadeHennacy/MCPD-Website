@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+This uses CSS Grid for the page layout so if something needs
+changed with the layout it would be wise to look up some CSS Grid
+examples. I have tried to name everything appropriately so that
+it would be easy to figure out what is what. Lastly, I just 
+included the CSS within the html file instead of using a separate
+.css file although that could easily be changed if you want.
+-->
+<html>
+
+<head>
+	<title>Front Page | Department of Information Technology</title>
+	<style>
+		body {
+			background-color: #cccccc;
+		}
+
+		/*CSS GRID SETUP*/
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(auto-fit, 5, 1fr);
+			grid-gap: .5em;
+		}
+
+		.grid>div {
+			padding: .25em;
+			text-align: center;
+			color: #ffffff;
+		}
+
+		/*CONTAINERS*/
+		.logo {
+			grid-column: 1/5;
+			grid-row: 1/2;
+			background: #0d1431;
+			border-radius: 6px;
+		}
+
+		.contactinfo {
+			grid-column: 1/3;
+			grid-row: 2/4;
+			background: #ffffff;
+			border-radius: 6px;
+			border-style: solid;
+			border-color: #0d1431;
+			border-width: 4px;
+		}
+
+		.faqlink {
+			grid-column: 3/5;
+			grid-row: 2/4;
+			background: #9b9b9b;
+			border-radius: 6px;
+			border-style: solid;
+			border-color: #0d1431;
+			border-width: 4px;
+		}
+
+		.guestaccess {
+			grid-column: 1/2;
+			grid-row: 4/5;
+			background: #0d1431;
+			border-radius: 6px;
+		}
+
+		.offcampusspeed {
+			grid-column: 2/3;
+			grid-row: 4/5;
+			background: #0d1431;
+			border-radius: 6px;
+		}
+
+		.newandpass {
+			grid-column: 3/4;
+			grid-row: 4/5;
+			background: orange;
+			border-radius: 6px;
+		}
+
+		.policies {
+			grid-column: 4/5;
+			grid-row: 4/5;
+			background: #0d1431;
+			border-radius: 6px;
+		}
+
+		/*FONTS*/
+		.font1 {
+			font-family: "Georgia";
+			color: #0d1431;
+			font-size: calc(6px + .9vw);
+		}
+
+		.font2 {
+			font-family: "Georgia";
+			color: #0d1431;
+			font-size: calc(6px + .8vw);
+		}
+
+		.font3 {
+			font-family: "Georgia";
+			color: #0d1431;
+			font-size: calc(5px + .6vw);
+		}
+
+		.containerheading {
+			font-family: "Georgia";
+			color: #ffffff;
+			font-size: calc(6px + .8vw);
+		}
+
+		.containerheading2 {
+			font-family: "Georgia";
+			color: #0d1431;
+			font-size: calc(8px + .8vw);
+		}
+		
+
+		/*IMAGES*/
+		.mcimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			height: auto;
+			max-width: 600px;
+		}
+
+		.faqimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			height: auto;
+			max-width: 160px;
+			filter: invert(100%);
+		}
+
+		.guestaccessimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 65%;
+			height: auto;
+			max-width: 140px;
+			filter: invert(100%);
+		}
+
+		.boltimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 65%;
+			height: auto;
+			max-width: 160px;
+			filter: invert(100%);
+		}
+
+		.passresetimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 65%;
+			height: auto;
+			max-width: 160px;
+			filter: invert(100%);
+		}
+
+		.policyimg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			height: auto;
+			max-width: 100px;
+			filter: invert(0%);
+		}
+
+		.nounderlinelink {
+			text-decoration: none;
+			color: #0d1431;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="grid">
+		<div class="logo"><img class="mcimg" src="photos\MariettaLogoWhite_Hi.gif"></div>
+		<div class="contactinfo">
+			<p class="font1"><b>Contact MCPD</b></p>
+			<p class="font1"><b>TEXT-A-TICKET &#183; <a class="nounderlinelink" href="sms://+17405304376">(740)
+						530-4376</a></b> <i>(rapid notification)</i></p>
+			<p class="font1"><b>Email:</b> <a class="nounderlinelink"
+					href="mailto:mcithelp@marietta.edu">mcithelp@marietta.edu</a></p>
+			<p class="font3"><i>(<b>please include the following in your ticket:</b> the building, room/lab number, if
+					the issue is affecting more than just you, and a detailed description of the issue)</i></p>
+			<!-- <p class="font2"><b>Phone:</b> (855) 376-4860 <b>(toll free) &#183;</b> x4860 <b>(on campus)</b> -->
+			<a class="nounderlinelink" href="policy.html"><p class="font2">Click here to see Network & File Policies</p></a>
+			</p>
+		</div>
+		<div class="faqlink">
+			<p class="containerheading2"><a class="nounderlinelink" href="./faq/index.html"><b>FAQs</b></a></p>
+			<a href="./faq/index.html">
+				<img class="faqimg" src="photos\question.png">
+			</a>
+			<p class="containerheading2"><a class="nounderlinelink" href="./faq/index.html" ><b>Help and Answers</b></a></p>
+		</div>
+		<div class="guestaccess">
+			<p class="containerheading">Network Policy</p>
+			<a href="policy.html">
+				<img class="policyimg" src="photos\policy.png">
+			</a>
+		</div>
+		
+		<div class="newandpass">
+			<p class="containerheading">Password Reset<br/>New Accounts</p>
+			<a href="https://isweb.marietta.edu/credentials/" >
+				<img class="passresetimg" src="photos\passreset.png">
+			</a>
+		</div>
+		<div class="policies">
+			<p class="containerheading">Self-Service</p>
+			<a href="https://selfservice.marietta.edu" >
+				<img class="policyimg" src="photos\policy.png">
+			</a>
+		</div>
+		<div class="offcampusspeed">
+			<p class="containerheading"><b>Off Campus Speed Test</b></p>
+			<a href="http://www.speedtest.net/">
+				<img class="boltimg" src="photos\bolt.png">
+			</a>
+		</div>
+	</div>
+</body>
+
+</html>
