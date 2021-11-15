@@ -2,12 +2,14 @@ function sendTextMessage(){
     var location = document.getElementById('locationField').value;
     var name = document.getElementById('nameField').value;
     var clothes = document.getElementById('clothesField').value;
+    var destination = document.getElementById('destinationField').value;
+    var vehicle = document.getElementById('vehicleField').value;
     var link = 'sms://+17402360217';
     if(getOS() == 'Android') link += '?';
     else{
         link += '&'
     }
-    link += 'body=I need a campus escort. My name is ' + name + '. I am ' + location + '. I\'m wearing ' + clothes + ".";
+    link += 'body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + '"';
     window.location.href = link;
     
 }

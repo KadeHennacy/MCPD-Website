@@ -79,9 +79,13 @@
                 <form><b>Where are you? </b><br>
                     <input type="text" id="locationField" required><br>
                     <b>What's your name?</b><br>
-                    <input type="text" id="nameField"><br>
+                    <input type="text" id="nameField" required><br>
+                    <b>Where do you need to go?</b><br>
+                    <input type="text" id="destinationField" required><br>
                     <b>Describe your clothes:</b><br>
-                    <input type="text" id="clothesField"><br>
+                    <input type="text" id="clothesField" required><br>
+                    <b>Describe your vehicle (Optional):</b><br>
+                    <input type="text" id="vehicleField"><br>
                     <input type="submit" class="btn btn-sm btn-outline-dark" value="Send escort to your location" onclick="sendTextMessage()">
                 </form><br>
             </div>
