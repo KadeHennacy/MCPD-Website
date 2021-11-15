@@ -22,9 +22,11 @@ header{
     padding-left: 10%;
 }
 h4{
-    text-shadow: 1px 1px 1px black;
     font-weight: 700;
     justify-self: flex-start;
+}
+article > h4{
+    text-shadow: 1px 1px 1px black;
 }
 hr{
     height: 1px;
@@ -130,15 +132,16 @@ input[type="checkbox"]{
 }
 .content{
     width: 100%;
-    max-width: 520px;
+    max-width: 500px;
     border: 2px solid black;
     border-radius: 6px;
-    padding: 3%;
+    padding: 2%;
     margin: 1%;
     /* ask if they like the look of low or high margin better */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* flex-wrap: wrap; */
     /* justify-content: center; */
     /* align-items: center; */
     /* ^toggle stretch(default) or center to make buttons full width or compact. But also remember to toggle white space wrap*/
