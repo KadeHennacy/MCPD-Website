@@ -5,9 +5,6 @@
     .header1{
         justify-content: center;
     }
-    #buildingNumberField{
-        margin-bottom: 1em;
-    }
 }
 body{
     background-color: #0d1431;
@@ -55,9 +52,10 @@ article > p{
     text-shadow: 1px 1px 1px black;
     text-indent: 2em;
 }
-input[type="number"]{
+input[type="text"]{
     margin-top: 2%;
-    width: 10%;
+    margin-bottom: 1em;
+    width: 100%;
 }
 input[type="submit"]{
     font-weight: 700;

@@ -1,12 +1,12 @@
 function sendTextMessage(){
-    var buildingNumber = document.getElementById('buildingNumberField').value;
+    var location = document.getElementById('locationField').value;
     var link = 'sms://+17402360217';
     if(getOS() == 'Android') link += '?';
     else{
         link += '&'
     }
-    link += 'body=Please send an escort to building number ';
-    link += buildingNumber;
+    link += 'body=I need a campus escort. I am ';
+    link += location;
     window.location.href = link;
     
 }
