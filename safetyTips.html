@@ -63,14 +63,17 @@
         </ul>
         <h4>Safety/Injury Escorts</h4><br>
         <div class="escort">
-            <h4>Campus Escort</h4>
-            <i>MCPD will escort students across campus if they are injured or feel unsafe. To request an escort, describe where you are located. Use the parking map if you aren't sure where you are, or call <a href="tel:740-376-3333"><u>(740) 376-3333</u></a></i><br>
-            <form><b>Where are you? </b><br>
-                <input type="text" id="locationField" required><br>
-                <input type="submit" class="btn btn-sm btn-outline-dark" value="Send escort to your location" onclick="sendTextMessage()">
-            </form><br>
-            <a href="https://www.marietta.edu/sites/default/files/documents/Parking Map SP20v3.pdf" class="btn btn-light"><b>Parking map</b></a><br>
-        </div>
+                <h4>Campus Escort</h4>
+                <i>MCPD will escort students across campus if they are injured or feel unsafe. To request an escort, describe where you are located. Use the parking map above if you aren't sure where you are, or call <a href="tel:740-376-3333"><u>(740) 376-3333</u></a></i><br>
+                <form><b>Where are you? </b><br>
+                    <input type="text" id="locationField" required><br>
+                    <b>What's your name?</b><br>
+                    <input type="text" id="nameField"><br>
+                    <b>Describe your clothes:</b><br>
+                    <input type="text" id="clothesField"><br>
+                    <input type="submit" class="btn btn-sm btn-outline-dark" value="Send escort to your location" onclick="sendTextMessage()">
+                </form><br>
+            </div>
     </article>
 </body>
 </html>
