@@ -6,7 +6,7 @@
         justify-content: center;
     }
 }
-@media (min-width: 800px){
+@media (min-width: 500px){
     #sendText{
         display: none;
     }
@@ -200,6 +200,7 @@ input[type="checkbox"]{
     align-self: center;
     justify-self: center;
     display: inline;
+    font-size: .6em;
     margin-top: 1em;
     box-shadow: 2px 2px 4px grey;
 }
