@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Complaint Form</title>
+</head>
+<body>
+    <header class="header1">
+        <a href="index.html" class="linkHome">
+            <div class="headerLeft">
+                <div>
+                    <img class="mcpdlogo" src="photos/transparentMCPD.png" alt="transparentMCPD.png">
+                </div>
+                <div class="titleText">
+                    <div class="headertext1">
+                        MARIETTA COLLEGE
+                    </div>
+                    <div class="headertext2">
+                        POLICE
+                    </div>
+                    <div class="headertext3">
+                        DEPARTMENT
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div class="headerRight">
+            <a href="https://www.marietta.edu/" class="linkHome"><img class="mclogo"src="photos/MariettaLogoWhite_Hi.gif" alt="mclogo.gif"></a>
+        </div>
+    </header>
+    <article>
+        <h1>Complaint Form</h1> 
+        <section class="escort complaintForm">
+            <div class="content complaintForm">
+                <h4>Complaint Form</h4>
+                <form class="complaintForm">
+                    <div class="formRow">
+                        <b>Name:</b>
+                        <input type="text" name="complaintNameField" id="complaintNameField" class="form-control" required>
+                    </div>
+                    <div class="formRow">
+                        <b>Date:</b>
+                        <input type="date" id="dateField" class="form-control">
+                    </div>
+                    <br>
+                    <div class="formRow">
+                        <b>Type of Incident:</b>
+                    </div>
+                    <div class="radioRow">
+                        <label for="assault"><input type="radio" name="typeField" id="assault" value="assault">Assault</label>
+                        <label for="alcohol"><input type="radio" name="typeField" id="alcohol" value="alcohol">Alcohol</label>
+                        <label for="fraud"><input type="radio" name="typeField" id="fraud" value="fraud">Fraud</label>
+                        <label for="harassment"><input type="radio" name="typeField" id="harassment" value="harassment">Harassment</label>
+                        <label for="theft"><input type="radio" name="typeField" id="theft" value="theft">Theft</label>
+                        <label for="vandalismAuto"><input type="radio" name="typeField" id="vandalismAuto" value="vandalismAuto">Vandalism to Auto</label>
+                        <label for="vandalismBuilding"><input type="radio" name="typeField" id="vandalismBuilding" value="vandalismBuilding">Vandalism to Building</label>
+                        <label for="other"><input type="radio" name="typeField" id="other" value="other">Other(specify in description)</label>
+                    </div>
+                    <div class="formRow">
+                        <b>Location of Incident</b>
+                        <textarea class="form-control" name="incidentLocation" id="incidentLocation"></textarea>
+                    </div>
+                    <div class="formRow">
+                        <b>Description of Incident</b>
+                        <textarea class="form-control" name="incidentDescription" id="incidentDescription"></textarea>
+                        <p class="text-sm-left">Be as detailed as possible</p>
+                    </div>
+                    <div class="radioRow">
+                        <b>Gender of Offender/Suspect</b>
+                    </div>
+                    <div class="radioRow">
+                        <label for="male"><input type="radio" name="gender" id="male" value="Male">Male</label>
+                        <label for="female"><input type="radio" name="gender" id="female" value="Female">Female</label>
+                        <label for="unknown"><input type="radio" name="gender" id="unknown" value="Unknown">Unknown/Unsure</label>
+                    </div>
+                    <div class="radioRow">
+                        <b>Race of Suspect</b>
+                    </div>
+                    <div class="radioRow">
+                        <label for="asian"><input type="radio" name="race" id="asian" value="Asian">Asian</label>
+                        <label for="black"><input type="radio" name="race" id="black" value="Black">Black</label>
+                        <label for="Hispanic"><input type="radio" name="race" id="hispanic" value="Hispanic">Hispanic</label>
+                        <label for="native"><input type="radio" name="race" id="native" value="Native American">Native American</label>
+                        <label for="white"><input type="radio" name="race" id="white" value="White">White</label>
+                        <label for="raceOther"><input type="radio" name="race" id="raceOther" value="Other">Other</label>
+                        <label for="unknownRace"><input type="radio" name="race" id="unknownRace" value="Unknown/Unsure">Unknown/Unsure</label>
+                    </div>
+                    <div class="formRow">
+                        <b>Description of Offender/Suspect</b>
+                        <textarea class="form-control" name="suspectDescription" id="suspectDescription"></textarea>
+                        <p class="text-sm-left">Include age, hair color, height, weight, clothing, distinguishing marks, any words spoken, etc.</p>
+                    </div>
+                    <div class="formRow">
+                        <b>Name of Offender/Suspect (if known)</b>
+                        <textarea name="suspectName" id="suspectName"class="form-control"></textarea>
+                    </div>
+                    <div class="formRow">
+                        <b>Address of Offender/Suspect (if known)</b>
+                        <textarea name="suspectAddress" id="suspectAddress"class="form-control"></textarea>
+                    </div>
+                    <div class="formRow">
+                        <b>Description of Vehicle (if applicable)</b>
+                        <textarea name="suspectVehicle" id="suspectVehicle" class="form-control"></textarea>
+                    </div>
+                    <div class="formRow">
+                        <b>Any other relevant information</b>
+                        <textarea name="otherInfo" id="otherInfo" class="form-control"></textarea>
+                    </div><br>
+                    <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint" onclick="sendComplaint()">
+                </form><br>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <img src="photos/mclogo2.png" alt="mclogo2" class="mclogo2" id="mclogo2">
+        <p class="copyright centerText">&#169 Copyright 2021 Marietta College. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

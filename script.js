@@ -13,6 +13,27 @@ function sendTextMessage(){
     window.location.href = link;
     
 }
+function sendComplaint(){
+    var complaintName = document.getElementById('complaintNameField').value;
+    var complaintDate = document.getElementById('dateField').value;
+    var incidentType = document.querySelector('input[name="typeField"]:checked').value;
+    var incidentLocation = document.getElementById('incidentLocation').value
+    var incidentDescription = document.getElementById('incidentDescription').value;
+    var suspectGender = document.querySelector('input[name="gender"]:checked').value;
+    var suspectRace = document.querySelector('input[name="race"]:checked').value;
+    var suspectDescription = document.getElementById('suspectDescription').value;
+    var suspectName = document.getElementById('suspectName').value;
+    var suspectAddress = document.getElementById('suspectAddress').value;
+    var suspectVehicle = document.getElementById('suspectVehicle').value;
+    var otherInfo = document.getElementById('otherInfo').value;
+    var link = 'sms://+17402360217';
+    if(getOS() == 'Android') link += '?';
+    else{
+        link += '&'
+    }
+    link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Compplaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + 'Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
+    window.location.href = link;
+}
 function getOS() {
     var userAgent = window.navigator.userAgent,
         platform = window.navigator.platform,

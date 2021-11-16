@@ -33,16 +33,17 @@ footer{
     background-color: rgb(31, 28, 28);
     border: 3px solid black;
 }
+hr{
+    height: 1px;
+    background-color: white;
+}
 h4{
     font-weight: 700;
     justify-self: flex-start;
 }
-article > h4{
-    text-shadow: 1px 1px 1px black;
-}
-hr{
-    height: 1px;
-    background-color: white;
+textarea{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 article{
     padding-top: 3%;
@@ -50,6 +51,9 @@ article{
     padding-right: 8%;
     font-size: 18px;
     color: white;
+}
+article > h4{
+    text-shadow: 1px 1px 1px black;
 }
 article > h1{
     width: min-content;
@@ -70,6 +74,12 @@ input[type="text"]{
     margin-bottom: 1em;
     width: 80%;
 }
+input[type="date"]{
+    width: 80%
+ }
+ input[type="radio"]{
+     margin-right: .5em;
+ }
 input[type="submit"]{
     font-weight: 700;
     vertical-align: baseline;
@@ -170,7 +180,7 @@ input[type="checkbox"]{
 .escort{
     width: 100%;
     max-width: 520px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 6px;
     padding: 3%;
     margin-left: auto;
@@ -179,9 +189,9 @@ input[type="checkbox"]{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     color: black;
-    box-shadow: 5px 5px 5px black;
+    /* box-shadow: 5px 5px 5px black; */
 }
 .btn{
     /* justify-self: flex-end; */
@@ -195,4 +205,27 @@ input[type="checkbox"]{
 }
 .copyright{
     color: lightgray;
+}
+.complaintForm{
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: left; */
+    flex-wrap: wrap;
+}
+.formRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.radioRow{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 0.5em;
 }
