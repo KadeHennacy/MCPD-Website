@@ -110,8 +110,11 @@
                     <div class="formRow">
                         <b>Any other relevant information</b>
                         <textarea name="otherInfo" id="otherInfo" class="form-control"></textarea>
-                    </div><br>
-                    <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint" onclick="sendComplaint()">
+                    </div>
+                    <div class="submitRow">
+                        <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint (text)" onclick="sendComplaint('text')" id="sendText">
+                        <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint (email)" onclick="sendComplaint('email')">
+                    </div>
                 </form><br>
             </div>
         </section>

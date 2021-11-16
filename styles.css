@@ -6,6 +6,11 @@
         justify-content: center;
     }
 }
+@media (min-width: 800px){
+    #sendText{
+        display: none;
+    }
+}
 body{
     background-color: #0d1431;
     font-family: "Texta-Regular",Helvetica,Arial,sans-serif;
@@ -190,8 +195,12 @@ input[type="checkbox"]{
     color: black;
     /* box-shadow: 5px 5px 5px black; */
 }
-.btn{
-    /* justify-self: flex-end; */
+.submitRow > .btn{
+    width: 60%;
+    align-self: center;
+    justify-self: center;
+    display: inline;
+    margin-top: 1em;
     box-shadow: 2px 2px 4px grey;
 }
 .centerText{
@@ -225,4 +234,10 @@ input[type="checkbox"]{
     flex-wrap: wrap;
     justify-content: left;
     margin-top: 0.5em;
+}
+.submitRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

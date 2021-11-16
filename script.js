@@ -13,7 +13,7 @@ function sendTextMessage(){
     window.location.href = link;
     
 }
-function sendComplaint(){
+function sendComplaint(type){
     var complaintName = document.getElementById('complaintNameField').value;
     var complaintDate = document.getElementById('dateField').value;
     var incidentType = document.querySelector('input[name="typeField"]:checked').value;
@@ -26,7 +26,13 @@ function sendComplaint(){
     var suspectAddress = document.getElementById('suspectAddress').value;
     var suspectVehicle = document.getElementById('suspectVehicle').value;
     var otherInfo = document.getElementById('otherInfo').value;
-    var link = 'sms://+17405085098';
+    var link;
+    if(type == 'text'){
+        link = 'sms://+17405085098';
+    }
+    else{
+        link = 'mailto:mcpd@marietta.edu?subject=Complaint from MCPD Website';
+    }
     if(getOS() == 'Android') link += '?';
     else{
         link += '&'
