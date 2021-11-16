@@ -31,7 +31,7 @@ function sendComplaint(){
     else{
         link += '&'
     }
-    link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Compplaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + 'Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
+    link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Compplaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
     window.location.href = link;
 }
 function getOS() {
