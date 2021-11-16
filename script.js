@@ -26,7 +26,7 @@ function sendComplaint(){
     var suspectAddress = document.getElementById('suspectAddress').value;
     var suspectVehicle = document.getElementById('suspectVehicle').value;
     var otherInfo = document.getElementById('otherInfo').value;
-    var link = 'sms://+17402360217';
+    var link = 'sms://+17405085098';
     if(getOS() == 'Android') link += '?';
     else{
         link += '&'
