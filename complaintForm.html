@@ -45,14 +45,14 @@
                     </div>
                     <div class="formRow">
                         <b>Date:</b>
-                        <input type="date" id="dateField" class="form-control">
+                        <input type="date" id="dateField" class="form-control" required>
                     </div>
                     <br>
                     <div class="formRow">
                         <b>Type of Incident:</b>
                     </div>
                     <div class="radioRow">
-                        <label for="assault"><input type="radio" name="typeField" id="assault" value="assault">Assault</label>
+                        <label for="assault"><input type="radio" name="typeField" id="assault" value="assault" required>Assault</label>
                         <label for="alcohol"><input type="radio" name="typeField" id="alcohol" value="alcohol">Alcohol</label>
                         <label for="fraud"><input type="radio" name="typeField" id="fraud" value="fraud">Fraud</label>
                         <label for="harassment"><input type="radio" name="typeField" id="harassment" value="harassment">Harassment</label>
@@ -63,18 +63,18 @@
                     </div>
                     <div class="formRow">
                         <b>Location of Incident</b>
-                        <textarea class="form-control" name="incidentLocation" id="incidentLocation"></textarea>
+                        <textarea class="form-control" name="incidentLocation" id="incidentLocation" required></textarea>
                     </div>
                     <div class="formRow">
                         <b>Description of Incident</b>
-                        <textarea class="form-control" name="incidentDescription" id="incidentDescription"></textarea>
+                        <textarea class="form-control" name="incidentDescription" id="incidentDescription" required></textarea>
                         <p class="text-sm-left">Be as detailed as possible</p>
                     </div>
                     <div class="radioRow">
                         <b>Gender of Offender/Suspect</b>
                     </div>
                     <div class="radioRow">
-                        <label for="male"><input type="radio" name="gender" id="male" value="Male">Male</label>
+                        <label for="male"><input type="radio" name="gender" id="male" value="Male" required>Male</label>
                         <label for="female"><input type="radio" name="gender" id="female" value="Female">Female</label>
                         <label for="unknown"><input type="radio" name="gender" id="unknown" value="Unknown">Unknown/Unsure</label>
                     </div>
@@ -82,7 +82,7 @@
                         <b>Race of Suspect</b>
                     </div>
                     <div class="radioRow">
-                        <label for="asian"><input type="radio" name="race" id="asian" value="Asian">Asian</label>
+                        <label for="asian"><input type="radio" name="race" id="asian" value="Asian" required>Asian</label>
                         <label for="black"><input type="radio" name="race" id="black" value="Black">Black</label>
                         <label for="Hispanic"><input type="radio" name="race" id="hispanic" value="Hispanic">Hispanic</label>
                         <label for="native"><input type="radio" name="race" id="native" value="Native American">Native American</label>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="formRow">
                         <b>Description of Offender/Suspect</b>
-                        <textarea class="form-control" name="suspectDescription" id="suspectDescription"></textarea>
+                        <textarea class="form-control" name="suspectDescription" id="suspectDescription" required></textarea>
                         <p class="text-sm-left">Include age, hair color, height, weight, clothing, distinguishing marks, any words spoken, etc.</p>
                     </div>
                     <div class="formRow">
