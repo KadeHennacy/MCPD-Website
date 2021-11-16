@@ -133,9 +133,7 @@ input[type="checkbox"]{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
     justify-content: center;
-    /* ^ask if they like center or space-around better */
     padding-top: 1%;
     margin-bottom: 5%;
 }
@@ -170,7 +168,6 @@ input[type="checkbox"]{
     flex-direction: column;
     justify-content: center;
     /* flex-wrap: wrap; */
-    /* justify-content: center; */
     /* align-items: center; */
     /* ^toggle stretch(default) or center to make buttons full width or compact. But also remember to toggle white space wrap*/
     text-align: center;
