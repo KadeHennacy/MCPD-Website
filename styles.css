@@ -168,16 +168,18 @@ input[type="checkbox"]{
     border-radius: 6px;
     padding: 2%;
     margin: 1%;
-    /* ask if they like the look of low or high margin better */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     /* flex-wrap: wrap; */
     /* align-items: center; */
     /* ^toggle stretch(default) or center to make buttons full width or compact. But also remember to toggle white space wrap*/
     text-align: center;
     background-color: lightgrey;
     box-shadow: 5px 5px 5px black;
+}
+.content > * {
+    margin-bottom: 1.5em;
 }
 .escort{
     width: 100%;
@@ -194,6 +196,9 @@ input[type="checkbox"]{
     /* background-color: lightgrey; */
     color: black;
     /* box-shadow: 5px 5px 5px black; */
+}
+.escort > * {
+    display: block;
 }
 .submitRow > .btn{
     width: 60%;
