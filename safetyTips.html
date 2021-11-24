@@ -62,27 +62,25 @@
             <li>Always plan ahead, even if you are late or in a rush.  </li>
         </ul>
         <h4>Safety/Injury Escorts</h4>
-        <section class="escort">
-            <div class="content">
-                    <h4>Campus Escort</h4>
-                    <p><i>MCPD will escort students across campus if they are injured or feel unsafe. To request an escort, describe where you are located. Use the parking map above if you aren't sure where you are, or call <a href="tel:740-376-3333"><u>(740) 376-3333</u></a></i></p>
-                    <form><p><b>Where are you? </b></p>
-                        <input type="text" id="locationField" required>
-                        <p><b>What's your name?</b></p>
-                        <input type="text" id="nameField" required>
-                        <p><b>Where do you need to go?</b></p>
-                        <input type="text" id="destinationField" required>
-                        <p><b>Describe your clothes:</b></p>
-                        <input type="text" id="clothesField" required>
-                        <p><b>Describe your vehicle (Optional):</b></p>
-                        <input type="text" id="vehicleField">
-                        <input type="submit" class="btn btn-sm btn-outline-dark" value="Send escort to your location" onclick="sendTextMessage()">
-                    </form>
-                </div>
-        </section>
+        <div class="content blackTxt" id="CENTERED">
+                <h4>Campus Escort</h4>
+                <div class="font-italic">MCPD will escort students across campus if they are injured or feel unsafe. To request an escort, describe where you are located. Use the parking map above if you aren't sure where you are, or call <a href="tel:740-376-3333"><u>(740) 376-3333</u></a></div>
+                <form><div class="font-weight-bolder">Where are you? </div>
+                    <input type="text" class="form-control mx-auto" id="locationField" required>
+                    <div class="font-weight-bolder">What's your name?</div>
+                    <input type="text" class="form-control mx-auto" id="nameField" required>
+                    <div class="font-weight-bolder">Where do you need to go?</div>
+                    <input type="text" class="form-control mx-auto" id="destinationField" required>
+                    <div class="font-weight-bolder">Describe your clothes:</div>
+                    <input type="text" class="form-control mx-auto" id="clothesField" required>
+                    <div class="font-weight-bolder">Describe your vehicle (Optional):</div>
+                    <input type="text" class="form-control mx-auto" id="vehicleField">
+                    <input type="submit" class="btn btn-sm btn-outline-dark" value="Send escort to your location" onclick="sendTextMessage()">
+                </form>
+            </div>
     </article>
     <footer>
-        <img src="photos/mclogo2.png" alt="mcloSgo2" class="mclogo2">
+        <img src="photos/mclogo2.png" alt="mcloSgo2" class="mclogo">
         <p class="copyright centerText">&#169 Copyright 2021 Marietta College. All Rights Reserved</p>
     </footer>
 </body>

@@ -7,243 +7,340 @@
     }
 }
 @media (min-width: 500px){
-    #sendText{
+    #sendTextComplaint{
         display: none;
     }
+}
+#CENTERED,
+.centered,
+article > h1,
+.complaintForm
+{
+    margin: 0 auto;
+}
+#CENTERTEXT,
+.centerText{
+    text-align: center;
+}
+#LIGHTGRAYTXT,
+.lightGrayTxt,
+.copyright
+{
+    color: lightgray;
+}
+#BLACKTXT,
+.blackTxt
+{
+    color: black;
+}
+#WHITETXT,
+.whiteTxt,
+.titleText,
+article
+{
+    color: white;
+}
+#UNDERINE,
+.underline,
+article > h1
+{
+    width: min-content;
+    margin-bottom: 3%;
+    white-space: nowrap;
+    border-bottom: 2px solid currentColor;
+}
+#TEXTINDENT,
+.textIndent,
+article > p
+{
+    text-indent: 2em;
+}
+#NOINDENT,
+.noIndent
+{
+    text-indent: 0px;
+}
+#NODECORATION,
+.noDecoration,
+.linkHome:hover
+{
+    text-decoration: none;
+}
+#LGFONT,
+.lgFont,
+.headertext1,
+.headertext3
+{
+    font-size: 1.5rem;
+}
+#XLFONT,
+.xlFont,
+.headertext2
+{
+    font-size: 2rem;
+}
+#BLACKBORDER,
+.blackBorder,
+.content,
+header,
+footer
+{
+    border: 3px solid black; 
+}
+#GREYBACKGROUND,
+.greyBackground,
+header,
+footer
+{
+    background-color: rgb(28, 28, 28);
+}
+#IMAGESHADOW
+.imageShadow,
+.mcpdlogo,
+.mclogo,
+.mclogo
+{
+    -webkit-filter: drop-shadow(5px 5px 5px black);
+    filter: drop-shadow(5px 5px 5px black);
+}
+#TEXTSHADOWLIGHT,
+.textShadowLight,
+article > h4,
+article > h1,
+article > p
+{
+    text-shadow: 1px 1px 1px black;
+}
+#TEXTSHADOWDARK,
+.textShadowDark,
+header
+{
+    text-shadow: 5px 5px 5px black;
+}
+#FULLWIDTH,
+.fullWidth,
+.content,
+header
+{
+    width: 100%;
+}
+#WIDE,
+.wide,
+input[type="date"],
+input[type="text"]
+{
+    width: 80%
+ }
+#BOLDTXTLT,
+.boldTxtLt,
+.headertext1,
+.headertext3,
+input[type="submit"],
+article > h1,
+h4
+{
+    font-weight: 600;
+}
+#BOLDTXTHV,
+.boldTxtHv,
+.headertext2
+{
+    font-weight: 800;
+}
+#FLEX,
+.flex,
+header,
+footer,
+.titleText,
+.container,
+.checkList,
+.headerLeft,
+.content,
+.escort,
+.complaintForm,
+.formRow,
+.radioRow,
+.submitRow
+{
+    display: flex;
+}
+#FLEXROW,
+.flexRow,
+.container,
+.checkList,
+.headerLeft,
+.formRow,
+.submitRow,
+header
+{
+    flex-direction: row;
+}
+#FLEXCOL,
+.flexCol,
+.titleText,
+.content,
+.complaintForm,
+.radioRow,
+footer
+{
+    flex-direction: column;
+}
+#JUSTIFYLEFT,
+.justifyLeft,
+.checkList,
+.radioRow
+{
+    justify-content: left;
+}
+#JUSTIFYEVEN,
+.justifyEven,
+.content,
+.submitRow
+{
+    justify-content: space-evenly;
+}
+#JUSTIFYBETWEEN,
+.justifyBetween,
+.formRow,
+header
+{
+    justify-content: space-between;
+}
+#JUSTIFYCENTER,
+.justifyCenter,
+.container,
+.titleText,
+footer
+{
+    justify-content: center;
+}
+#JUSTIFYSSTART,
+.justifySStart,
+h4
+{
+    justify-self: flex-start;
+}
+#ALIGNITEMSBASE,
+.alignItemsBase,
+.formRow,
+.radioRow
+{
+    align-items: baseline;
+}
+#ALIGNITEMSCENTER,
+.alignItemsCenter,
+header,
+footer
+{
+    align-items: center;
+}
+#FLEXWRAP,
+.flexWrap,
+.formRow,
+.radioRow,
+.submitRow,
+.container,
+.checkList,
+.complaintForm
+{
+    flex-wrap: wrap;
+}
+#HPADDING,
+.hPadding,
+header
+{
+    padding: 0 8%;
+}
+#VPADDING,
+.vPadding,
+footer
+{
+    padding: 5% 0;
+}
+#VERTICALMARGIN,
+.verticalMargin,
+.mclogo,
+.copyright,
+.radioRow,
+.content > *,
+input[type="text"],
+textarea
+{
+    margin: 0.75em 0;
+}
+#RIGHTMARGIN,
+.rightMargin,
+input[type="checkbox"],
+input[type="radio"]
+{
+    margin-right: .75em;
+}
+#LEFTMARGIN,
+.leftMargin,
+.checkList
+{
+    margin-left: 2em;
+}
+#VALIGNBASE,
+.vAlignBase,
+input[type="submit"]
+{
+    vertical-align: baseline;
+}
+#NARROWCONTENT,
+.narrowContent,
+.content{
+    max-width: 500px;
+}
+#WIDECONTENt,
+.wideContent,
+.complaintForm
+{
+    max-width: 1100px;
+}
+#MCPDLOGO,
+.mcpdlogo
+{
+    width: 150px;
+}
+#MCLOGO,
+.mclogo
+{
+    width: 250px;
 }
 body{
     background-color: #0d1431;
     font-family: "Texta-Regular",Helvetica,Arial,sans-serif;
 }
-header{
-    display: flex;
-    /* position: fixed; */
-    /* ask them if they want header to stay at top */
-    width: 100%;
-    background-color: rgb(31, 28, 28);
-    border: 3px solid black;
-    text-shadow: 5px 5px 5px black;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 10%;
-}
-footer{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(31, 28, 28);
-    border: 3px solid black;
-}
 hr{
     height: 1px;
     background-color: white;
-}
-h4{
-    font-weight: 700;
-    justify-self: flex-start;
-}
-textarea{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
 }
 article{
     padding-top: 3%;
     padding-left: 8%;
     padding-right: 8%;
     font-size: 18px;
-    color: white;
-}
-article > h4{
-    text-shadow: 1px 1px 1px black;
-}
-article > h1{
-    width: min-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3%;
-    white-space: nowrap;
-    border-bottom: 2px solid currentColor;
-    text-shadow: 1px 1px 1px black;
-    font-weight: 700;
-}
-article > p{
-    text-shadow: 1px 1px 1px black;
-    text-indent: 2em;
-}
-input[type="text"]{
-    margin-top: 2%;
-    margin-bottom: 1em;
-    width: 80%;
-}
-input[type="date"]{
-    width: 80%
- }
- input[type="radio"]{
-     margin-right: .5em;
- }
-input[type="submit"]{
-    font-weight: 700;
-    vertical-align: baseline;
-}
-input[type="checkbox"]{
-    margin-right: 1em;
-}
-.linkHome{
-    display: block;
-}
-.linkHome:hover{
-    text-decoration: none;
-}
-.titleText{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.headertext1{
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-.headertext2{
-    font-weight: 800;
-    font-size: 2rem;
-}
-.headertext3{
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-.mcpdlogo{
-    width: 150px;
-    height: 165px;
-    -webkit-filter: drop-shadow(5px 5px 5px black);
-    filter: drop-shadow(5px 5px 5px black)
-}
-.mclogo{
-    width: 250px;
-    height: 108px;
-    -webkit-filter: drop-shadow(5px 5px 5px black);
-    filter: drop-shadow(5px 5px 5px black);
-}
-.mclogo2{
-    width: 250px;
-    -webkit-filter: drop-shadow(3px 3px 3px black);
-    filter: drop-shadow(3px 3px 3px black);
-    margin-bottom: 1em;
 }
 .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     padding-top: 1%;
     margin-bottom: 5%;
 }
-.checkList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-left: 2em;
-}
 .checkItem{
     white-space: nowrap;
-    width: 9em;
-}
-.headerLeft{
-    display: flex;
-    flex-direction: row;
-}
-.headerRight{
-    align-self: center;
-    padding-right: 10%;
+    width: 10em;
 }
 .content{
-    width: 100%;
-    max-width: 500px;
-    border: 2px solid black;
-    border-radius: 6px;
+    border-radius: 1em;
     padding: 2%;
     margin: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* flex-wrap: wrap; */
-    /* align-items: center; */
-    /* ^toggle stretch(default) or center to make buttons full width or compact. But also remember to toggle white space wrap*/
     text-align: center;
     background-color: lightgrey;
     box-shadow: 5px 5px 5px black;
 }
-.content > * {
-    margin-bottom: 1.5em;
-}
-.escort{
-    width: 100%;
-    max-width: 520px;
-    /* border: 2px solid black; */
-    border-radius: 6px;
-    padding: 3%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    /* background-color: lightgrey; */
-    color: black;
-    /* box-shadow: 5px 5px 5px black; */
-}
-.escort > * {
-    display: block;
-}
 .submitRow > .btn{
     width: 60%;
-    align-self: center;
-    justify-self: center;
-    display: inline;
     font-size: .6em;
     margin-top: 1em;
     box-shadow: 2px 2px 4px grey;
-}
-.centerText{
-    text-align: center;
-}
-.noIndent{
-    text-indent: 0px;
-}
-.copyright{
-    color: lightgray;
-}
-.complaintForm{
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: left; */
-    flex-wrap: wrap;
-}
-.formRow{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-}
-.radioRow{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-top: 0.5em;
-}
-.submitRow{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
