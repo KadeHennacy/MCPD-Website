@@ -273,6 +273,11 @@ footer
 {
     flex-wrap: wrap;
 }
+#NOFLEXWRAP,
+.noFlexWrap
+{
+    flex-wrap: nowrap;
+}
 #HPADDING,
 .hPadding,
 header
