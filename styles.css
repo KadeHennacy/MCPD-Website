@@ -5,6 +5,13 @@
     .header1{
         justify-content: center;
     }
+    .input-group-text{
+        width: 80px !important;
+        font-size: 0.7em;
+    }
+    input[type="text"]::-webkit-input-placeholder{
+        font-size: 0.7em;
+    }
 }
 @media (min-width: 500px){
     #sendTextComplaint{
@@ -18,8 +25,16 @@ article > h1,
 {
     margin: 0 auto;
 }
+#LEFTTEXT,
+.leftText
+{
+    text-align: left;
+}
 #CENTERTEXT,
-.centerText{
+.centerText,
+.btn,
+.content
+{
     text-align: center;
 }
 #LIGHTGRAYTXT,
@@ -27,6 +42,12 @@ article > h1,
 .copyright
 {
     color: lightgray;
+}
+#LIGHTGRAYBACKGROUND,
+.lightGrayBackground,
+.content
+{
+    background-color: lightgrey;
 }
 #BLACKTXT,
 .blackTxt
@@ -126,10 +147,15 @@ header
 }
 #WIDE,
 .wide,
-input[type="date"],
-input[type="text"]
+input[type="date"]
 {
     width: 80%
+ }
+ #MINWIDTH,
+ .minWidth
+ {
+     width: min-content;
+     white-space: nowrap;
  }
 #BOLDTXTLT,
 .boldTxtLt,
@@ -160,7 +186,8 @@ footer,
 .complaintForm,
 .formRow,
 .radioRow,
-.submitRow
+.submitRow,
+.escortForm
 {
     display: flex;
 }
@@ -181,7 +208,8 @@ header
 .content,
 .complaintForm,
 .radioRow,
-footer
+footer,
+.escortForm
 {
     flex-direction: column;
 }
@@ -253,17 +281,19 @@ header
 }
 #VPADDING,
 .vPadding,
-footer
+footer,
+article
 {
     padding: 5% 0;
 }
-#VERTICALMARGIN,
-.verticalMargin,
+#VMARGIN,
+.vMargin,
 .mclogo,
 .copyright,
 .radioRow,
-.content > *,
 input[type="text"],
+article > h4,
+article > h5,
 textarea
 {
     margin: 0.75em 0;
@@ -280,12 +310,6 @@ input[type="radio"]
 .checkList
 {
     margin-left: 2em;
-}
-#VALIGNBASE,
-.vAlignBase,
-input[type="submit"]
-{
-    vertical-align: baseline;
 }
 #NARROWCONTENT,
 .narrowContent,
@@ -309,6 +333,7 @@ input[type="submit"]
     width: 250px;
 }
 body{
+    color: black;
     background-color: #0d1431;
     font-family: "Texta-Regular",Helvetica,Arial,sans-serif;
 }
@@ -331,11 +356,10 @@ article{
     width: 10em;
 }
 .content{
+    height: min-content;
     border-radius: 1em;
-    padding: 2%;
+    padding: 3%;
     margin: 1%;
-    text-align: center;
-    background-color: lightgrey;
     box-shadow: 5px 5px 5px black;
 }
 .submitRow > .btn{
@@ -343,4 +367,7 @@ article{
     font-size: .6em;
     margin-top: 1em;
     box-shadow: 2px 2px 4px grey;
+}
+.input-group-text{
+    width: 111px;
 }
