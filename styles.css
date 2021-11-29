@@ -1,4 +1,4 @@
-@media (max-width: 800px){
+@media (max-width: 768px){
     .mclogo{
         display: none;
     }
@@ -6,17 +6,22 @@
         justify-content: center;
     }
 }
-@media (min-width: 500px){
+@media (min-width: 480px){
     #sendTextComplaint{
         display: none;
+    }
+    .emergency{
+        display: none !important;
     }
 }
 #CENTERED,
 .centered,
 article > h1,
+.emergency > h4,
 .complaintForm
 {
-    margin: 0 auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 #CENTERTEXT,
 .centerText{
@@ -42,7 +47,8 @@ article
 }
 #UNDERINE,
 .underline,
-article > h1
+article > h1,
+.emergency > h4
 {
     width: min-content;
     margin-bottom: 3%;
@@ -331,6 +337,7 @@ article{
     width: 10em;
 }
 .content{
+    height: min-content;
     border-radius: 1em;
     padding: 2%;
     margin: 1%;
@@ -343,4 +350,7 @@ article{
     font-size: .6em;
     margin-top: 1em;
     box-shadow: 2px 2px 4px grey;
+}
+.input-group-text{
+    width: 111px;
 }
