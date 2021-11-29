@@ -1,10 +1,14 @@
 function sendTextMessage(){
+    var link;
     var location = document.getElementById('locationField').value;
     var name = document.getElementById('nameField').value;
     var clothes = document.getElementById('clothesField').value;
     var destination = document.getElementById('destinationField').value;
     var vehicle = document.getElementById('vehicleField').value;
-    var link = 'sms://+17402360217';
+    if(screen.width > 480){
+        link = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website';
+    }
+    else link = 'sms://+17402360217';
     if(getOS() == 'Android') link += '?';
     else{
         link += '&'
