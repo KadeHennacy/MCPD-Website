@@ -5,7 +5,7 @@ function sendTextMessage(){
     var clothes = document.getElementById('clothesField').value;
     var destination = document.getElementById('destinationField').value;
     var vehicle = document.getElementById('vehicleField').value;
-    if(screen.width > 480){
+    if(!navigator.userAgentData.mobile){
         link = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website';
     }
     else link = 'sms://+17402360217';
