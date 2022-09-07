@@ -8,7 +8,7 @@ function sendTextMessage(){
     if(!navigator.userAgentData.mobile){
         link = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website&';
     }
-    else link = 'sms://+17402360217;';
+    else link = 'sms://+17402360217&';
     if(getOS() == 'Android') link = 'sms://+17402360217?';
     link += 'body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + vehicle + '"';
     window.location.href = link;
@@ -29,7 +29,7 @@ function sendComplaint(type){
     var otherInfo = document.getElementById('otherInfo').value;
     var link;
     if(type == 'text'){
-        link = 'sms://+17405085098;';
+        link = 'sms://+17405085098&';
     }
     else{
         link = 'mailto:mcpd@marietta.edu?subject=Complaint from MCPD Website&';
