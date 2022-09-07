@@ -34,7 +34,7 @@ function sendComplaint(type){
     else{
         link = 'mailto:mcpd@marietta.edu?subject=Complaint from MCPD Website&';
     }
-    if(getOS() == 'Android') link = 'sms://+17402360217?';
+    if(getOS() == 'Android' && type == 'text') link = 'sms://+17402360217?';
     link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Complaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
     window.location.href = link;
 }
