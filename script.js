@@ -12,7 +12,7 @@ function sendTextMessage(){
     if(getOS() == 'Android') link = 'sms://+17402360217?';
     link += 'body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + vehicle + '"';
     window.location.href = link;
-    alert("Send text from your messaging app to complete request";
+    return false;
     
 }
 function sendComplaint(type){
@@ -38,7 +38,7 @@ function sendComplaint(type){
     if(getOS() == 'Android' && type == 'text') link = 'sms://+17402360217?';
     link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Complaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
     window.location.href = link;
-    alert("Remeber to hit send using your mail app or messaging app");
+    return false;
 }
 function getOS() {
     var userAgent = window.navigator.userAgent,
