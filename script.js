@@ -11,6 +11,7 @@ function sendTextMessage(){
     else link = 'sms://+17402360217&';
     if(getOS() == 'Android') link = 'sms://+17402360217?';
     link += 'body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + vehicle + '"';
+    alert("link = " + link + "  OS = " + getOS());
     window.location.href = link;
     return false;
     
@@ -37,6 +38,7 @@ function sendComplaint(type){
     }
     if(getOS() == 'Android' && type == 'text') link = 'sms://+17402360217?';
     link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Complaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
+    alert("link = " + link + "  OS = " + getOS() + " type = " + type);
     window.location.href = link;
     return false;
 }
