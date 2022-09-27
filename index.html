@@ -5,15 +5,18 @@
     Website for MCPD using CSS flexbox and Bootstrap buttons
  -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     <title>MCPD</title>
 </head>
+
 <body>
     <header class="header1">
         <a href="index.html" class="linkHome">
@@ -35,96 +38,128 @@
             </div>
         </a>
         <div class="headerRight">
-            <a href="https://www.marietta.edu/" class="linkHome"><img class="mclogo"src="photos/MariettaLogoWhite_Hi.gif" alt="mclogo.gif"></a>
+            <a href="https://www.marietta.edu/" class="linkHome"><img class="mclogo"
+                    src="photos/MariettaLogoWhite_Hi.gif" alt="mclogo.gif"></a>
         </div>
     </header>
     <section class="container">
-            <div class="content emergency">
-                <h4>EMERGENCY</h4>
-                <a href="tel:911" class="btn btn-danger mb-5"><b>Call:</b> 911</a>
-            </div>
-            <div class="content">
-                <h4>Contact MCPD (non-emergency)</h4>
-                <a href="tel:740-376-3333" class="btn btn-light"><b>Call:</b> (740)-376-3333</a>
-                <a href="sms://+17402360217" class="btn btn-light"><b>Text:</b> (740)-236-0217</a>
-                <a href="mailto: mcpd@marietta.edu"class="btn btn-light"><b>Email:</b> MCPD@marietta.edu</a>
-            </div>
-            <div class="content">
-                <h4>Report A Tip</h4>
-                <a href="complaintForm.html" class="btn btn-light"><b>Complaint Form</b></a>
-                <a href="sms://+17402360217" class="btn btn-light"><b>Chat with MCPD</b></a>
-                <a href="tel:740-376-3333" class="btn btn-light"><b>Call MCPD</b></a>
-            </div>
-            <div class="content">
-                <h4>Parking</h4>
-                <a href="https://www.permitsales.net/MC" class="btn btn-light"><b>Register For Permit | Pay/appeal ticket</b></a>
-                <a href="https://www.marietta.edu/sites/default/files/documents/mc_parking_permit_request_04222020.pdf" class="btn btn-light"><b>Permit requests for new students and employees</b></a>
-                <a href="https://www.marietta.edu/sites/default/files/documents/Parking Map SP20v3.pdf" class="btn btn-light"><b>Parking map</b></a>
-                <a href="https://www.marietta.edu/parking-vehicles" class="btn btn-light"><b>Parking regulations</b></a>
-            </div>
-            <div class="content">
-                <h4>Resources</h4>
-                <a href="https://www.marietta.edu/directory?name=&department%5B0%5D=796" class="btn btn-light"><b>MCPD Staff Directory</b></a>
-                <a href="https://www.marietta.edu/id-cards-faq" class="btn btn-light"><b>ID Card FAQ</b></a>
-                <a href="https://www.marietta.edu/crime-statistics" class="btn btn-light"><b>Crime Statistics</b></a>
-                <a href="safetyTips.html" class="btn btn-light"><b>Safety Tips</b></a>
-            </div class="content">
-            <div class="content">
-                <h4>Emergency Plans</h4>
-                <a href="activeShooter.html" class="btn btn-light"><b>Active Shooter</b></a>
-                <a href="bombThreat.html" class="btn btn-light"><b>Bomb Threat</b></a>
-                <a href="hazmatIncident.html" class="btn btn-light"><b>Hazmat Incident</b></a>
-                <a href="severWeather.html" class="btn btn-light"><b>Severe Weather</b></a>
-                <a href="fireSafety.html" class="btn btn-light"><b>Fire Safety</b></a>
-            </div>
-            <div class="content">
-                <h4>Campus Escort</h4>
-                <div class="vPadding">
-                    <div class="font-italic">MCPD will escort students across campus if they are injured or feel unsafe. To request an escort, describe where you are located. Use the parking map above if you aren't sure where you are, or call <a href="tel:740-376-3333"><u>(740) 376-3333</u></a></div>
-                    <div>
-                        <form class="mt-3 mb-0 escortForm" onSubmit="return sendTextMessage()">
-                            <div class="input-group my-2">
-                                <div class="input-group-prepend mr-0">
-                                  <span class="input-group-text" id="locationPrepend">Location:</span>
-                                </div>
-                                <input type="text" name="studentLocation" id="locationField" class="form-control mt-0 ml-0" placeholder="Where are you?" aria-label="Student's Location"aria-describedby="locationPrepend" required>
+        <div class="content">
+            <form onSubmit="return sendTextMessage()">
+                <input type="submit" class="btn btn-sm btn-outline-dark mt-3 centerText minWidth centered"
+                    value="Test js in form calling sendTextMessage onSubmit">
+            </form>
+            <form>
+                form with buttons mapped to sendComplaint onclick
+                <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint (text)"
+                    onclick="return sendComplaint('text')" id="sendTextComplaint">
+                <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint (email)"
+                    onclick="return sendComplaint('email')">
+            </form>
+            Button mapped to its own js function onclick
+            <button onClick="testJs()">Test js</button>
+
+        </div>
+        <div class="content emergency">
+            <h4>EMERGENCY</h4>
+            <a href="tel:911" class="btn btn-danger mb-5"><b>Call:</b> 911</a>
+        </div>
+        <div class="content">
+            <h4>Contact MCPD (non-emergency)</h4>
+            <a href="tel:740-376-3333" class="btn btn-light"><b>Call:</b> (740)-376-3333</a>
+            <a href="sms://+17402360217" class="btn btn-light"><b>Text:</b> (740)-236-0217</a>
+            <a href="mailto: mcpd@marietta.edu" class="btn btn-light"><b>Email:</b> MCPD@marietta.edu</a>
+        </div>
+        <div class="content">
+            <h4>Report A Tip</h4>
+            <a href="complaintForm.html" class="btn btn-light"><b>Complaint Form</b></a>
+            <a href="sms://+17402360217" class="btn btn-light"><b>Chat with MCPD</b></a>
+            <a href="tel:740-376-3333" class="btn btn-light"><b>Call MCPD</b></a>
+        </div>
+        <div class="content">
+            <h4>Parking</h4>
+            <a href="https://www.permitsales.net/MC" class="btn btn-light"><b>Register For Permit | Pay/appeal
+                    ticket</b></a>
+            <a href="https://www.marietta.edu/sites/default/files/documents/mc_parking_permit_request_04222020.pdf"
+                class="btn btn-light"><b>Permit requests for new students and employees</b></a>
+            <a href="https://www.marietta.edu/sites/default/files/documents/Parking Map SP20v3.pdf"
+                class="btn btn-light"><b>Parking map</b></a>
+            <a href="https://www.marietta.edu/parking-vehicles" class="btn btn-light"><b>Parking regulations</b></a>
+        </div>
+        <div class="content">
+            <h4>Resources</h4>
+            <a href="https://www.marietta.edu/directory?name=&department%5B0%5D=796" class="btn btn-light"><b>MCPD Staff
+                    Directory</b></a>
+            <a href="https://www.marietta.edu/id-cards-faq" class="btn btn-light"><b>ID Card FAQ</b></a>
+            <a href="https://www.marietta.edu/crime-statistics" class="btn btn-light"><b>Crime Statistics</b></a>
+            <a href="safetyTips.html" class="btn btn-light"><b>Safety Tips</b></a>
+        </div class="content">
+        <div class="content">
+            <h4>Emergency Plans</h4>
+            <a href="activeShooter.html" class="btn btn-light"><b>Active Shooter</b></a>
+            <a href="bombThreat.html" class="btn btn-light"><b>Bomb Threat</b></a>
+            <a href="hazmatIncident.html" class="btn btn-light"><b>Hazmat Incident</b></a>
+            <a href="severWeather.html" class="btn btn-light"><b>Severe Weather</b></a>
+            <a href="fireSafety.html" class="btn btn-light"><b>Fire Safety</b></a>
+        </div>
+        <div class="content">
+            <h4>Campus Escort</h4>
+            <div class="vPadding">
+                <div class="font-italic">MCPD will escort students across campus if they are injured or feel unsafe. To
+                    request an escort, describe where you are located. Use the parking map above if you aren't sure
+                    where you are, or call <a href="tel:740-376-3333"><u>(740) 376-3333</u></a></div>
+                <div>
+                    <form class="mt-3 mb-0 escortForm" onSubmit="return sendTextMessage()">
+                        <div class="input-group my-2">
+                            <div class="input-group-prepend mr-0">
+                                <span class="input-group-text" id="locationPrepend">Location:</span>
                             </div>
-                            <div class="input-group my-2">
-                                <div class="input-group-prepend mr-0">
-                                  <span class="input-group-text" id="namePrepend">Name:</span>
-                                </div>
-                                <input type="text" name="studentName" id="nameField" class="form-control mt-0 ml-0" placeholder="What's your name?" aria-label="Student's Name"aria-describedby="namePrepend" required>
+                            <input type="text" name="studentLocation" id="locationField" class="form-control mt-0 ml-0"
+                                placeholder="Where are you?" aria-label="Student's Location"
+                                aria-describedby="locationPrepend" required>
+                        </div>
+                        <div class="input-group my-2">
+                            <div class="input-group-prepend mr-0">
+                                <span class="input-group-text" id="namePrepend">Name:</span>
                             </div>
-                            <div class="input-group my-2">
-                                <div class="input-group-prepend mr-0">
-                                  <span class="input-group-text" id="destinationPrepend">Destination:</span>
-                                </div>
-                                <input type="text" name="studentDestination" id="destinationField"
-                                class="form-control mt-0 ml-0" placeholder="Where do you need to go?" aria-label="Student's Destination" aria-describedby="destinationPrepend" required>
+                            <input type="text" name="studentName" id="nameField" class="form-control mt-0 ml-0"
+                                placeholder="What's your name?" aria-label="Student's Name"
+                                aria-describedby="namePrepend" required>
+                        </div>
+                        <div class="input-group my-2">
+                            <div class="input-group-prepend mr-0">
+                                <span class="input-group-text" id="destinationPrepend">Destination:</span>
                             </div>
-                            <div class="input-group my-2">
-                                <div class="input-group-prepend mr-0">
-                                  <span class="input-group-text" id="clothesPrepend">Clothes:</span>
-                                </div>
-                                <input type="text" name="studentClothes" id="clothesField"
-                                class="form-control mt-0 ml-0" placeholder="Describe your clothes" aria-label="Student's clothes" aria-describedby="clothesPrepend" required>
+                            <input type="text" name="studentDestination" id="destinationField"
+                                class="form-control mt-0 ml-0" placeholder="Where do you need to go?"
+                                aria-label="Student's Destination" aria-describedby="destinationPrepend" required>
+                        </div>
+                        <div class="input-group my-2">
+                            <div class="input-group-prepend mr-0">
+                                <span class="input-group-text" id="clothesPrepend">Clothes:</span>
                             </div>
-                            <div class="input-group my-2">
-                                <div class="input-group-prepend mr-0">
-                                  <span class="input-group-text" id="vehiclePrepend">Vehicle:</span>
-                                </div>
-                                <input type="text" name="studentVehicle" id="vehicleField"
-                                class="form-control mt-0 ml-0" placeholder="Describe your vehicle (optional)" aria-label="Student's vehicle" aria-describedby="vehiclePrepend">
+                            <input type="text" name="studentClothes" id="clothesField" class="form-control mt-0 ml-0"
+                                placeholder="Describe your clothes" aria-label="Student's clothes"
+                                aria-describedby="clothesPrepend" required>
+                        </div>
+                        <div class="input-group my-2">
+                            <div class="input-group-prepend mr-0">
+                                <span class="input-group-text" id="vehiclePrepend">Vehicle:</span>
                             </div>
-                            <input type="submit" class="btn btn-sm btn-outline-dark mt-3 centerText minWidth centered" value="Send escort to your location">
-                        </form>
-                    </div>
+                            <input type="text" name="studentVehicle" id="vehicleField" class="form-control mt-0 ml-0"
+                                placeholder="Describe your vehicle (optional)" aria-label="Student's vehicle"
+                                aria-describedby="vehiclePrepend">
+                        </div>
+                        <input type="submit" class="btn btn-sm btn-outline-dark mt-3 centerText minWidth centered"
+                            value="Send escort to your location">
+                    </form>
                 </div>
             </div>
+        </div>
     </section>
     <footer>
-        <img src="photos/mclogo2.png" alt="mclogo" class="mclogo2" >
+        <img src="photos/mclogo2.png" alt="mclogo" class="mclogo2">
         <p class="copyright centerText">&#169 Copyright 2021 Marietta College. All Rights Reserved</p>
     </footer>
 </body>
+
 </html>

@@ -1,3 +1,7 @@
+function testJs(){
+    alert("js works! Now calling sendTextMessage")
+    sendTextMessage()
+}
 function sendTextMessage(){
     var link;
     var location = document.getElementById('locationField').value;
