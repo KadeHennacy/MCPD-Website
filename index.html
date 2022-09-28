@@ -44,20 +44,8 @@
     </header>
     <section class="container">
         <div class="content">
-            <form onSubmit="return sendTextMessage()">
-                <input type="submit" class="btn btn-sm btn-outline-dark mt-3 centerText minWidth centered"
-                    value="Test js in form calling sendTextMessage onSubmit">
-            </form>
-            <form>
-                form with buttons mapped to sendComplaint onclick
-                <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint (text)"
-                    onclick="return sendComplaint('text')" id="sendTextComplaint">
-                <input type="submit" class="btn btn-sm btn-outline-dark" value="Send Complaint (email)"
-                    onclick="return sendComplaint('email')">
-            </form>
-            Button mapped to its own js function onclick
-            <button onClick="testJs()">Test js</button>
-
+            <button onClick="testJs1()">window.location.href = link</button>
+            <button onClick="testJs2()">location.href = link</button>
         </div>
         <div class="content emergency">
             <h4>EMERGENCY</h4>
