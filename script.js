@@ -1,10 +1,10 @@
 function testJs1(){
     alert("testJs1 called")
-    window.location.href = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website&body=Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'
+    window.location.href = 'sms://+17405085098&body=Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'
 }
 function testJs2(){
     alert("testJs2 called")
-    location.href = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website&body=Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'
+    location.href = 'sms://+17405085098&body=Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'
 }
 function sendTextMessage(){
     var link;

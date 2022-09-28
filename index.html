@@ -46,6 +46,14 @@
         <div class="content">
             <button onClick="testJs1()">window.location.href = link</button>
             <button onClick="testJs2()">location.href = link</button>
+            <form onSubmit="return testJs2()">
+                <input type="submit" class="btn btn-sm btn-outline-dark mt-3 centerText minWidth centered"
+                            value="Form mapped to testJs2 on submit">
+            </form>
+            <form>
+                <input type="submit" class="btn btn-sm btn-outline-dark" value="Submit with onClick mapped to testJs1" onclick="return testJs2()" id="sendTextComplaint">
+                <input type="submit" class="btn btn-sm btn-outline-dark" value="Submit with onClick mapped to testJS2" onclick="return testJs2()">
+            </form>
         </div>
         <div class="content emergency">
             <h4>EMERGENCY</h4>
