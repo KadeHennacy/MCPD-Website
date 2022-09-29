@@ -7,8 +7,8 @@ function testJs2(){
     location.href = 'sms://+17405085098/&body=Escort%20request%20from%20MCPD%20website:%20Student%20name:%20"1234"%20Location%20description:%20"1234"%20Destination%20description:%20"1234"%20Clothing%20description:%20"1234"%20Vehicle%20description:%20"1234"'
 }
 function testJs3(){
-    alert("testJs3 called")
-    location.href = 'sms://+17405085098/&body=Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'
+    alert("testJs3 called. Link is " + 'sms://+17405085098/&body=' + encodeURI('Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'))
+    location.href = 'sms://+17405085098/&body=' + encodeURI('Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"')
 }
 function sendTextMessage(){
     var link;
