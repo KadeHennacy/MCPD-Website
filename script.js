@@ -1,15 +1,3 @@
-function testJs1(){
-    alert("testJs1 called")
-    window.location.href = 'sms://+17405085098/&body=Escort%20request%20from%20MCPD%20website:%20Student%20name:%20"1234"%20Location%20description:%20"1234"%20Destination%20description:%20"1234"%20Clothing%20description:%20"1234"%20Vehicle%20description:%20"1234"'
-}
-function testJs2(){
-    alert("testJs2 called")
-    location.href = 'sms://+17405085098/&body=Escort%20request%20from%20MCPD%20website:%20Student%20name:%20"1234"%20Location%20description:%20"1234"%20Destination%20description:%20"1234"%20Clothing%20description:%20"1234"%20Vehicle%20description:%20"1234"'
-}
-function testJs3(){
-    alert("testJs3 called. Link is " + 'sms://+17405085098/&body=' + encodeURI('Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"'))
-    location.href = 'sms://+17405085098/&body=' + encodeURI('Escort request from MCPD website: Student name: "1234" Location description: "1234" Destination description: "1234" Clothing description: "1234" Vehicle description: "1234"')
-}
 function sendTextMessage(){
     var link;
     var location = document.getElementById('locationField').value;
@@ -20,11 +8,10 @@ function sendTextMessage(){
     if(!navigator.userAgentData.mobile){
         link = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website&';
     }
-    else link = 'sms://+17402360217&';
-    if(getOS() == 'Android') link = 'sms://+17402360217?';
-    link += 'body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + vehicle + '"';
-    alert("link = " + link + "  OS = " + getOS());
-    window.location.href = link;
+    else link = 'sms://+17402360217/&';
+    if(getOS() == 'Android') link = 'sms://+17402360217/?';
+    link += encodeURI('body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + vehicle + '"');
+    location.href = link;
     return false;
     
 }
@@ -43,15 +30,14 @@ function sendComplaint(type){
     var otherInfo = document.getElementById('otherInfo').value;
     var link;
     if(type == 'text'){
-        link = 'sms://+17405085098&';
+        link = 'sms://+17405085098/&';
     }
     else{
         link = 'mailto:mcpd@marietta.edu?subject=Complaint from MCPD Website&';
     }
-    if(getOS() == 'Android' && type == 'text') link = 'sms://+17402360217?';
-    link += 'body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Complaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"';
-    alert("link = " + link + "  OS = " + getOS() + " type = " + type);
-    window.location.href = link;
+    if(getOS() == 'Android' && type == 'text') link = 'sms://+17402360217/?';
+    link += encodeURI('body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Complaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"');
+    location.href = link;
     return false;
 }
 function getOS() {
