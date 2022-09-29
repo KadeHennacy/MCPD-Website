@@ -5,13 +5,13 @@ function sendTextMessage(){
     var clothes = document.getElementById('clothesField').value;
     var destination = document.getElementById('destinationField').value;
     var vehicle = document.getElementById('vehicleField').value;
-    if(!navigator.userAgentData.mobile){
+    if(getOS() == "Windows" || getOS() == "Mac OS" || getOS() == "Linux"){
         link = 'mailto:mcpd@marietta.edu?subject=Escort request from MCPD website&';
     }
     else link = 'sms://+17402360217/&';
     if(getOS() == 'Android') link = 'sms://+17402360217/?';
     link += encodeURI('body=Escort request from MCPD website: Student name: "' + name + '" Location description: "' + location + '" Destination description: "' + destination + '" Clothing description: "' + clothes + '" Vehicle description: "' + vehicle + '"');
-    location.href = link;
+    window.location.href = link;
     return false;
     
 }
@@ -37,7 +37,7 @@ function sendComplaint(type){
     }
     if(getOS() == 'Android' && type == 'text') link = 'sms://+17402360217/?';
     link += encodeURI('body=Complaint from MCPD website: Complaint name: "' + complaintName + '" Complaint date: "' + complaintDate + '" Incident type: "' + incidentType + '" Incident location: "' + incidentLocation + '" Incident Description: "' + incidentDescription + '" Suspect gender: "' + suspectGender + '" Suspect race: "' + suspectRace + '" Suspect description: "' + suspectDescription + '" Suspect name: "' + suspectName + '" Suspect address: "' + suspectAddress + '" Suspect vehicle: "' + suspectVehicle + '" Other information: "' + otherInfo + '"');
-    location.href = link;
+    window.location.href = link;
     return false;
 }
 function getOS() {
