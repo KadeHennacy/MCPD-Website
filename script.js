@@ -30,7 +30,7 @@ function sendComplaint(type){
     var otherInfo = document.getElementById('otherInfo').value;
     var link;
     if(type == 'text'){
-        link = 'sms://+17405085098/&';
+        link = 'sms://+17402360217/&';
     }
     else{
         link = 'mailto:mcpd@marietta.edu?subject=Complaint from MCPD Website&';
